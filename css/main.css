@@ -2,6 +2,10 @@ html, body {
   font-family: 'Roboto', sans-serif;
   background-color: #ededed;
 }
+.container>.navbar-header {
+  margin-right: 0;
+  margin-left: 0;
+}
 .navbar {
   margin-top: 20px;
   background-color: #ededed;
@@ -17,6 +21,20 @@ html, body {
 }
 .navbar-nav>.active>a {
   background-color: transparent !important;
+}
+.navbar-default .navbar-toggle, .navbar-default .navbar-toggle:hover {
+  border: none;
+  background-color: transparent;
+}
+.navbar-toggle:hover .icon-bar:nth-child(2){
+  margin-left: -10px;
+  transition:all .1s ease-in;
+}
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 30px;
+  height: 4px;
+  border-radius: 2px;
 }
 .row{
   margin: 0px;
@@ -57,12 +75,35 @@ img {
   font-size: 12pt;
 }
 .footer {
-  margin: 30px 0;
+  padding: 30px 0;
+  text-align: center;
 }
-@media screen and (max-width: 720px) {
-.container {
-  padding: 0;
-}
-.main-about {
-  padding: 45px;
+
+@media screen and (max-width: 992px) {
+  .container {
+    padding: 0;
+  }
+  .navbar-default, .navbar-collapse {
+    border: none;
+  }
+  .container>.navbar-collapse {
+    margin: 0;
+  }
+  div#bs-example-navbar-collapse-1.navbar-collapse.collapse.in {
+    height: 100vh !important;
+    transition:all .2s ease-in;
+  }
+  .navbar-nav {
+    text-align: center;
+  }
+  .navbar-collapse>ul {
+    margin: 50% 0;
+  }
+  .navbar-nav>li>a {
+    font-size: 25pt;
+    margin: 20px;
+  }
+  .main-about {
+    padding: 45px;
+  }
 }
