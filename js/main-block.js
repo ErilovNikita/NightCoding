@@ -3,11 +3,11 @@ $(document).ready(function(){
   $('.block').mouseenter(
     function(){
 
-      $(".block-active").stop().animate({
+      $(".block > .block-active").stop().animate({
         opacity: "1"
       }, 300),
 
-      $(".text").stop().animate({
+      $(".block > .block-active > .text").stop().animate({
         opacity: "1",
         bottom: "-30%"
       }, 300);
@@ -17,14 +17,16 @@ $(document).ready(function(){
     $('.block').mouseleave(
       function(){
 
-        $(".block-active").stop().animate({
+        $(".block > .block-active").stop().animate({
           opacity: "0"
         }, 300),
 
-        $(".text").stop().animate({
+        $(".block > .block-active > .text").stop().animate({
           opacity: "0",
           bottom: "-100%"
         }, 300);
 
       });
+
+
 });
