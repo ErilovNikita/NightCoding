@@ -83,6 +83,12 @@ img {
   .container {
     padding: 0;
   }
+  .main-about {
+    padding: 45px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .navbar-default, .navbar-collapse {
     border: none;
   }
@@ -92,6 +98,10 @@ img {
   div#bs-example-navbar-collapse-1.navbar-collapse.collapse.in {
     height: 100vh !important;
     transition:all .2s ease-in;
+    z-index: 99;
+    position: fixed;
+    background-color: #ededed;
+    width: 100%;
   }
   .navbar-nav {
     text-align: center;
@@ -102,8 +112,5 @@ img {
   .navbar-nav>li>a {
     font-size: 25pt;
     margin: 20px;
-  }
-  .main-about {
-    padding: 45px;
   }
 }
